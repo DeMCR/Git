@@ -3,24 +3,25 @@ border: 2px solid black;
 background-color: white;
 margin: 0 auto;
 
-width:60%;
-height: 400px;
+width:50%;
+height: 600px;
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 justify-content: center;
 align-content: flex-end;
-align-items:stretch;
+
 
 }
 
 #rojo{
     
-	width: 100px;
-	/* height: 100px; */
+	width: 200px;
+	height: 200px;
 	
 
 	font-size: 30px;
+	color: white;
     background-color: red;
     display:flex;
 	justify-content: center;
@@ -31,10 +32,11 @@ align-items:stretch;
 
 #azul{
 
-	width: 100px;
-	/* height: 100px; */
+	width: 200px;
+	height: 200px;
 	
 	font-size: 30px;
+	color: white;
     background-color: blue;
     display: flex;
 	justify-content: center;
@@ -43,10 +45,10 @@ align-items:stretch;
 }
 #verde{
 
-	width: 100px;
-	/* height: 100px; */
-	
+	width: 200px;
+	height: 200px;
 	font-size: 30px;
+	color: white;
 background-color: green;
 display: flex;
 	justify-content: center;
