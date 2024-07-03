@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1>tarea transporte</h1>
+    <p>0 a 1000 metros = pie </p>
+
+    <p> 1000 a 10000 metros = bicicleta</p>
+
+    <p> 10000 a 30000 metros = colectivo</p>
+
+    <p>30000 a 100000 metros = auto</p>
+
+    <p> +100000 = avion</p>
+
+    <p>Según los métros indicados le corresponde:  </p>
+
+    <script type="text/javascript">
+
+
+        const seleccion = parseInt(prompt("elegir un número para representar la cantidad de metros", ``));
+
+
+
+        if (seleccion <= 1000) {
+            document.write('ir a pie');
+        } else if (seleccion == 1000 || seleccion <= 10000) {
+            document.write('corresponde ir en bici.');
+        } else if (seleccion == 10000 || seleccion <= 30000) {
+            document.write('corresponde ir en colectivo.');
+        } else if (seleccion == 30000 || seleccion <= 100000) {
+            document.write('corresponde ir en auto.');
+        } else {
+            document.write('corresponde ir en avion.');
+        }
+        fi
+    </script>
+
+
+
+
+</body>
+
+</html>
