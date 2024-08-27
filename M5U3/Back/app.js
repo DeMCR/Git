@@ -42,7 +42,9 @@ app.use('/admin/login', loginRouter);
 
 var pool = require('./models/db');
 
-
+pool.query('select * from empleados').then(function(resultados) {
+    console.log(resultados)
+});
 
 
 // app.get('/', function (req, res) {
