@@ -4,10 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const session = require('express-session');
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const loginRouter = require('./routes/admin/login');
+const { title } = require('process');
 
 var app = express();
 
@@ -21,10 +25,27 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(session({
+  secret: 'jskjskasjaksjaksjiemvebd',
+  resave: false,
+  saveUninitialized:true
+}));
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 
 app.use('/admin/login', loginRouter);
+
+app.get('/', function (req, res) {
+  var conocido = Boolean(req.session.nombre);
+
+  res.render('index', {
+    title: 'Sesiones en Express.js',
+    conocido: conocido,
+    nombre: req.session.nombre
+  });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
