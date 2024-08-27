@@ -1,0 +1,220 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background: rgb(2,0, 36);
+    background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(213,13,13,1) 100%);
+}
+
+
+
+header{
+    /* background-color: white; */
+    /* padding: 16px 0; 1rem 0;  */
+    /* margin-left: none; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header h1{
+    color: #0A0A09;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    /* los 3 de abajo (inline, position y bottom) son un ejemplo de la profe para hacer en lugar de caja flexible. Probar las dos opciones. Ver min 28/29 de esta clase */
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    /* margin-left: 10px; */
+}
+
+nav{
+    background-color: #6da9ed;
+    /* margin-bottom: 20px; */
+}
+
+nav ul {
+    /* para quitar el punto molesto de las listas */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+ flex-grow: 1;
+}
+
+nav ul li a{
+   color: white;
+   text-decoration: none;
+   /* text-decoration quita la linea debajo de las palabras */
+   padding: 3px 6px;
+   display: block;
+   /* text-align: center; */
+}
+
+nav ul li a.activo{
+    background-color: #4c76a5;
+}
+nav ul li a:hover{
+    /* el hover para que se coloree la palabra al acercar el mouse */
+    background-color: rgba(0,0,0, 3);
+}
+
+footer{
+    background-color: #ccc; /*cccccc*/
+    clear: both;
+    color: #333;
+    text-align: center;
+    padding: 5px 0; /*3rem 0*/
+    margin-top:20px;
+}
+
+.holder{
+    max-width: 960px;
+    /* margin: 0 auto; */
+}
+
+/* inicio home */
+
+
+
+h2{
+    color:#2e64a1;
+    font-weight: 400;
+}
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.testimonios{
+    width: 25%;
+}
+
+.columnas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos p{
+    font-size: 20px;
+}
+
+.testimonio{
+    background-color: #ccc;
+    padding: 16px;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    display: block;
+}
+
+.testimonio .autor{
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 12px 0;
+}
+
+/* fin Home */
+
+/* inicio Nosotros */
+
+.historia p{
+    font-size: 12px; /*0.7rem*/
+}
+
+.personas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.persona img{
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.persona h5,
+.persona h6{
+    margin:0;
+    font-weight: normal;
+    color: #2e64a1;
+}
+
+.persona h5{
+font-size: 14px;
+margin-top: 5px;
+}
+
+.persona h6{
+    font-size: 11px;
+    font-style: italic;
+}
+
+.persona p{
+color: #666;
+font-size: 10px;
+}
+
+/* fin  Nosotros */
+
+/* Inicio Servicios */
+
+.servicio{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1 px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
+.servicio .info p{
+    font-size: 13px;
+    /* line-height: 19px; */
+}
+
+.servicio img{
+    border-radius: 13px;
+    display: flex;
+    max-width: 225px;
+}
+
+.servicio:nth-child(even) {
+    flex-direction: row-reverse;
+}
+/* Esto significa que cuando los hijos sean pares, invierta la dirección. Tenes en cuenta que arranca desde la posicion 0, por eso se invierten el primero y tercero */
+
+
+/* fin servicios */

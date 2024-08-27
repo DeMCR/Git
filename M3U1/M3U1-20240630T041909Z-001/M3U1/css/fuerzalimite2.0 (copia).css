@@ -1,0 +1,433 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background: rgb(2,0, 36);
+    background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(213,13,13,1) 100%);
+}
+#contenedor {
+    
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    /* overflow: hidden; */
+}
+
+aside {
+    position: relative;
+    background: whitesmoke;
+
+    width: 190px;
+}
+
+.container{
+	position:relative;
+}
+.main{
+	position:relative;
+    width:680px;
+    margin: 0 auto;
+}
+
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+header{
+    /* background-color: white; */
+    /* padding: 16px 0; 1rem 0;  */
+    /* margin-left: none; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header h1{
+    color: #0A0A09;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    /* los 3 de abajo (inline, position y bottom) son un ejemplo de la profe para hacer en lugar de caja flexible. Probar las dos opciones. Ver min 28/29 de esta clase */
+    display: inline-block;
+    /* position: relative; */
+    bottom: 35px;
+    /* margin-left: 10px; */
+}
+
+nav{
+    /* background-color: #6da9ed; */
+    margin-bottom: 20px;
+}
+
+nav ul {
+    /* para quitar el punto molesto de las listas */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+ flex-grow: 1;
+}
+
+nav ul li a{
+   color: white;
+   text-decoration:none;
+   position: relative;
+   /* text-decoration quita la linea debajo de las palabras */
+   padding: 3px 6px;
+   display: block;
+   /* text-align: center; */
+}
+
+nav ul li a.activo{
+    text-decoration: underline;
+}
+
+nav ul li a:hover{
+    /* el hover para que se coloree la palabra al acercar el mouse */
+    text-decoration: none;
+    color: #000;
+   
+}
+
+nav ul li a::before{
+    content:"";
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left:0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover:before{
+    transform:scaleX(1);
+}
+
+
+
+footer{
+    background-color: #ccc; /*cccccc*/
+    clear: both;
+    color: #333;
+    text-align: center;
+    padding: 5px 0; /*3rem 0*/
+    margin-top:20px;
+}
+
+.holder{
+    max-width: 960px;
+    /* margin: 0 auto; */
+}
+
+/* inicio home */
+.view {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    /* -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+    -moz-box-shadow: 1px 1px 2px #e6e6e6;
+    box-shadow: 1px 1px 2px #e6e6e6; */
+    cursor: default;
+    
+ }
+ .view .mask,.view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+ }
+ .view img {
+    display: block;
+    position: relative;
+ }
+ .view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+ }
+ .view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center;
+ }
+ .view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 1px #000;
+ }
+ .view a.info:hover {
+    -webkit-box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000;
+ }
+.view-second img {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+ }
+ .view-second .mask {
+    background-color: rgba(115,146,184, 0.7);
+    width: 300px;
+    padding: 60px;
+    height: 300px;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: translate(265px, 145px) rotate(45deg);
+    -moz-transform: translate(265px, 145px) rotate(45deg);
+    -o-transform: translate(265px, 145px) rotate(45deg);
+    -ms-transform: translate(265px, 145px) rotate(45deg);
+    transform: translate(265px, 145px) rotate(45deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+ }
+ .view-second h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    -webkit-transform: translate(200px, -200px);
+    -moz-transform: translate(200px, -200px);
+    -o-transform: translate(200px, -200px);
+    -ms-transform: translate(200px, -200px);
+    transform: translate(200px, -200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+ }
+ .view-second p {
+    -webkit-transform: translate(-200px, 200px);
+    -moz-transform: translate(-200px, 200px);
+    -o-transform: translate(-200px, 200px);
+    -ms-transform: translate(-200px, 200px);
+    transform: translate(-200px, 200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+ }
+ .view-second a.info {
+    -webkit-transform: translate(0px, 100px);
+    -moz-transform: translate(0px, 100px);
+    -o-transform: translate(0px, 100px);
+    -ms-transform: translate(0px, 100px);
+    transform: translate(0px, 100px);
+    -webkit-transition: all 0.2s 0.1s ease-in-out;
+    -moz-transition: all 0.2s 0.1s ease-in-out;
+    -o-transition: all 0.2s 0.1s ease-in-out;
+    -ms-transition: all 0.2s 0.1s ease-in-out;
+    transition: all 0.2s 0.1s ease-in-out;
+ }
+ .view-second:hover .mask {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translate(-80px, -125px) rotate(45deg);
+    -moz-transform: translate(-80px, -125px) rotate(45deg);
+    -o-transform: translate(-80px, -125px) rotate(45deg);
+    -ms-transform: translate(-80px, -125px) rotate(45deg);
+    transform: translate(-80px, -125px) rotate(45deg);
+ }
+ .view-second:hover h2 {
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -o-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+ }
+ .view-second:hover p {
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -o-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+ }
+ .view-second:hover a.info {
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -o-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+ }
+ 
+
+
+
+/* fin Home */
+
+/* inicio Nosotros */
+
+.historia p{
+    font-size: 12px; /*0.7rem*/
+}
+
+.personas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.persona img{
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.persona h5,
+.persona h6{
+    margin:0;
+    font-weight: normal;
+    color: #2e64a1;
+}
+
+.persona h5{
+font-size: 14px;
+margin-top: 5px;
+}
+
+.persona h6{
+    font-size: 11px;
+    font-style: italic;
+}
+
+.persona p{
+color: #666;
+font-size: 10px;
+}
+
+/* fin  Nosotros */
+
+/* Inicio Servicios */
+
+.servicio{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1 px solid #2e64a1;
+    padding-bottom: 10px;
+}
+
+.servicio .info p{
+    font-size: 13px;
+    /* line-height: 19px; */
+}
+
+.servicio img{
+    border-radius: 13px;
+    display: flex;
+    max-width: 225px;
+}
+
+.servicio:nth-child(even) {
+    flex-direction: row-reverse;
+}
+/* Esto significa que cuando los hijos sean pares, invierta la dirección. Tenes en cuenta que arranca desde la posicion 0, por eso se invierten el primero y tercero */
+
+
+/* fin servicios */

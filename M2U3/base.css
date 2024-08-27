@@ -49,7 +49,7 @@ aside {
 	#contenedor {
 		display: flex;
 		flex-direction: column;
-		
+		width: 100%;
 
 
 	}
@@ -70,14 +70,15 @@ aside {
 	}
 
 	section{
+	     
 		margin: 0;
 		padding-left: 1%;
 		background-color: #CCC59E;
-		width: auto;
+		width: 100%
 		display:flex;
 		flex-direction: column;
-		justify-content: center;
-		padding-inline: 10px 200px;
+		/* justify-content: center; */
+		/* padding-inline: 10px 200px; */
 		border-bottom: #000 1px solid ;
 		
 	}
@@ -87,11 +88,11 @@ aside {
 		padding-left: 1%;
 	
 		background-color: rgb(169, 168, 168);
-		width: auto;
+		/* width: auto; */
 		display:flex;
 		flex-direction: column;
-		justify-content: center;
-		padding-inline: 10px 200px;
+		/* justify-content: center; */
+		/* padding-inline: 10px 200px; */
 		border-bottom: #000 1px solid ;
 
 	};
