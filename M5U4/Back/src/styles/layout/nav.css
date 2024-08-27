@@ -1,0 +1,54 @@
+nav{
+    
+    margin-bottom: 20px;
+}
+
+nav ul {
+    /* para quitar el punto molesto de las listas */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+ flex-grow: 1;
+}
+
+nav ul li a{
+   color: white;
+   text-decoration:none;
+   position: relative;
+   /* text-decoration quita la linea debajo de las palabras */
+   padding: 3px 6px;
+   display: block;
+   /* text-align: center; */
+}
+
+nav ul li a.activo{
+    text-decoration: underline;
+}
+
+nav ul li a:hover{
+    /* el hover para que se coloree la palabra al acercar el mouse */
+    text-decoration: none;
+    color: #000;
+
+}
+
+nav ul li a::before{
+    content:"";
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left:0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover:before{
+    transform:scaleX(1);
+}
