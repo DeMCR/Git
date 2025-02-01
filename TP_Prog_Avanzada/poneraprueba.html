@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="estilo.css">
+  <title>Juego</title>
+</head>
+
+<body onscroll="AnimacionHeader ()">
+
+
+
+
+  <header class="contenedor">
+
+
+    <img class="fondo2" src="img/img2.jpg" alt="fondo">
+
+    <h1>JUGUEMOS UN POCO</h1>
+    <nav>
+      <div class="holder">
+        <div> <a href="index.html">
+            <svg>
+
+              <rect class="base" x="5" y="0" height="50" width="90" fill="pink" stroke="black"></rect>
+              <rect class="base" x="37" y="50" height="20" width="25" fill="pink" stroke="black"></rect>
+              <polygon class="base" points="15 80, 0 95 , 100 95, 85 80" fill="pink" stroke="black">
+              </polygon>
+              <rect class="capa1" x="10" y="5" height="40" width="80" stroke="grey"></rect>
+              <polygon class="capa1" points="17 82, 5 93, 95 93, 83 82" fill="black" stroke="grey">
+              </polygon>
+              <line class="capa2" x1="20" y1="15" x2="70" y2="15" stroke="green"></line>
+              <line class="capa2" x1="20" y1="20" x2="65" y2="20" stroke="green"></line>
+              <line class="capa2" x1="20" y1="25" x2="70" y2="25" stroke="green"></line>
+              <line class="capa2" x1="20" y1="30" x2="45" y2="30" stroke="green"></line>
+              <line class="capa2" x1="20" y1="35" x2="75" y2="35" stroke="green"></line>
+
+
+            </svg>
+          </a>
+        </div>
+        <ul>
+          <li><a href="./historia.html">HISTORIA</a></li>
+          <li> <a href="./poneraprueba.html">JUGUEMOS</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="holder2">
+    <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
+    <div class="secciones">
+      <div class="padre-zona">
+        <div class="zona">Arrastre y suelte la imágene aquí</div>
+        <div class="zona">Arrastre y suelte la imágene aquí</div>
+        <div class="zona">Arrastre y suelte la imágene aquí</div>
+      </div>
+    </div>
+    <div class="padre-img">
+
+      <div class="imagen">
+        <img draggable="true" src="img/juego/rompe2.png" alt="parte2">
+      </div>
+      <div class="imagen">
+        
+        <img draggable="true" src="img/juego/Rompe1.png" alt="parte1">
+      </div>
+      <div class="imagen">
+        <img draggable="true" src="img/juego/Rompe3.png" alt="parte3">
+      </div>
+     
+
+    </div>
+
+
+    <footer>
+      <div>
+        <img src="./img/logo.png" width="100" alt="logo">
+
+        <p>PROGRAMACION E HISTORIA</p>
+      </div>
+      <div>
+        <p>Sitio con fines educativos - TP Proyecto_final_De_Marco_Rocio</p>
+      </div>
+
+
+
+    </footer>
+
+
+
+
+
+    <script src="JS/d&d.js"></script>
+    <script src="JS/header.js"></script>
+</body>
+
+</html>
